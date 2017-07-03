@@ -206,6 +206,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -601,7 +603,7 @@ ModelImporter:
       name: Walk
       takeName: Walk
       firstFrame: 0
-      lastFrame: 50
+      lastFrame: 42
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -791,7 +793,7 @@ ModelImporter:
       name: Walk2
       takeName: Walk2
       firstFrame: 0
-      lastFrame: 50
+      lastFrame: 36
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1551,7 +1553,7 @@ ModelImporter:
       name: Roar0
       takeName: Roar0
       firstFrame: 0
-      lastFrame: 92
+      lastFrame: 65
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1741,7 +1743,7 @@ ModelImporter:
       name: Death1
       takeName: Death1
       firstFrame: 0
-      lastFrame: 92
+      lastFrame: 38
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1931,7 +1933,7 @@ ModelImporter:
       name: Jump
       takeName: Jump
       firstFrame: 0
-      lastFrame: 92
+      lastFrame: 66
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -2121,7 +2123,7 @@ ModelImporter:
       name: Shift_right
       takeName: Shift_right
       firstFrame: 0
-      lastFrame: 92
+      lastFrame: 32
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -2311,7 +2313,7 @@ ModelImporter:
       name: Shift_left
       takeName: Shift_left
       firstFrame: 0
-      lastFrame: 92
+      lastFrame: 32
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -2881,7 +2883,7 @@ ModelImporter:
       name: Attack1
       takeName: Attack1
       firstFrame: 0
-      lastFrame: 102
+      lastFrame: 53
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -3078,7 +3080,7 @@ ModelImporter:
       name: Attack2
       takeName: Attack2
       firstFrame: 0
-      lastFrame: 102
+      lastFrame: 64
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -3275,7 +3277,7 @@ ModelImporter:
       name: Attack3
       takeName: Attack3
       firstFrame: 0
-      lastFrame: 102
+      lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -3472,7 +3474,7 @@ ModelImporter:
       name: Attack4
       takeName: Attack4
       firstFrame: 0
-      lastFrame: 102
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -3669,7 +3671,7 @@ ModelImporter:
       name: Attack5
       takeName: Attack5
       firstFrame: 0
-      lastFrame: 102
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -3866,7 +3868,7 @@ ModelImporter:
       name: Attack6
       takeName: Attack6
       firstFrame: 0
-      lastFrame: 102
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -4063,7 +4065,7 @@ ModelImporter:
       name: Attack7
       takeName: Attack7
       firstFrame: 0
-      lastFrame: 102
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -4260,7 +4262,7 @@ ModelImporter:
       name: Roar
       takeName: Roar
       firstFrame: 0
-      lastFrame: 102
+      lastFrame: 63
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -4450,7 +4452,7 @@ ModelImporter:
       name: Prowl
       takeName: Prowl
       firstFrame: 0
-      lastFrame: 102
+      lastFrame: 87
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -4661,6 +4663,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -4671,7 +4674,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1

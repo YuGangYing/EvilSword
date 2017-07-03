@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{2914C982-FE46-E7F9-38A5-F71153856882}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_2;UNITY_5_6;UNITY_5;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;CROSS_PLATFORM_INPUT;PLAYMAKER;PLAYMAKER_1_8;PLAYMAKER_1_8_3;PLAYMAKER_1_8_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\EasyTouchInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\EasyTouchMenu.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\EasyTouchTriggerInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\EasyTouchWelcomeScreen.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\EasytouchHierachyCallBack.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\HTGuiTools.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickDragInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickEnterExitInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickLongTapInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickPinchInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickSwipeInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickTapInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickTouchInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickTwistInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCAreaInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCAxisInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCButtonInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCDPadInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCGuiTools.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCJoystickInspector.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCMenu.cs" />
+     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCTouchPadInspector.cs" />
+     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Editor\InvDatabaseInspector.cs" />
+     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Editor\InvFindItem.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\ActiveAnimationEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\BMFontReader.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\ComponentSelector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\EventDelegateDrawer.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\EventDelegateEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\FreeType.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\NGUIContextMenu.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\NGUIEditorExtensions.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\NGUIEditorTools.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\NGUIHandles.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\NGUIHelp.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\NGUIJson.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\NGUIMenu.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\NGUISelectionTools.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\NGUISettings.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\NGUISnap.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\NGUITransformInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\PropertyBindingEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\PropertyReferenceDrawer.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\SpriteSelector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\TweenAlphaEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\TweenColorEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\TweenFOVEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\TweenHeightEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\TweenOrthoSizeEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\TweenPositionEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\TweenRotationEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\TweenScaleEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\TweenTransformEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\TweenVolumeEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\TweenWidthEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UI2DSpriteEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIAnchorEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIAtlasInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIAtlasMaker.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIBasicSpriteEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIButtonColorEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIButtonEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIButtonKeysEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIButtonMessageEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UICameraEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UICameraTool.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UICreateNewUIWizard.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UICreateWidgetWizard.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIDragObjectEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIDrawCallInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIDrawCallViewer.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIEventTriggerEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIFontInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIFontMaker.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIForwardEventsEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIGridEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIImageButtonInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIInputEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIKeyNavigationEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UILabelInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UILocalizeEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIPanelInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIPanelTool.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIPlayAnimationEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIPlayTweenEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIPopupListInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIPrefabTool.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIProgressBarEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIRectEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIRootEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIScrollBarEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIScrollViewEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UISliderEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UISnapshotPointEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UISpriteAnimationInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UISpriteInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIStretchEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UITableEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UITextureInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UITexturePacker.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIToggleInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UITweenerEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIWidgetContainerEditor.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIWidgetInspector.cs" />
+     <Compile Include="Assets\NGUI\Scripts\Editor\UIWrapContentEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\BaseClasses\OnAnimatorUpdateActionEditorBase.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorAnimatorRootActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorBoneGameObjectActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorBoolActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorCurrentStateInfoActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorCurrentStateInfoIsNameActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorCurrentStateInfoIsTagActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorCurrentTransitionInfoActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorCurrentTransitionInfoIsNameActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorCurrentTransitionInfoIsUserNameActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorDeltaActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorFloatActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorGravityWeightActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorIKGoalActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorIntActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorIsLayerInTransitionActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorIsMatchingTargetActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorLayerWeightActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorNextStateInfoActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorPivotActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorSpeedActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorTargetActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\SetAnimatorBoolActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\SetAnimatorFloatActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\SetAnimatorIntActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Editor\CallMethodEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Editor\GetDistanceEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Editor\LookAtActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Editor\MoveTowardsActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Editor\SetCameraFOVActionEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Editor\SetPropertyEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\GetQuaternionEulerAnglesCustomEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\GetQuaternionFromRotationCustomEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\GetQuaternionMultipliedByQuaternionCustomEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\GetQuaternionMultipliedByVectorCustomEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionAngleAxisCustomEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionCustomEditorBase.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionEulerCustomEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionInverseCustomEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionLerpCustomEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionLookRotationCustomEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionLowPassFilterCustomEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionRotateTowardsCustomEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionSlerpCustomEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\AboutWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\AssetGUIDs.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\ContextToolWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\EditorStartupPrefs.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmActionWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmComponentInspector.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmEditorHelpers.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmEditorWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmErrorWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmEventsWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmGlobalsWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmLogWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmSelectorWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmStateWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmTemplate.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmTemplateEditor.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmTemplateWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\FsmTimelineWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerAutoUpdater.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerBugReportWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerBuildCallbacks.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerCustomActionWizard.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerDefines.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerEditorStartup.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerGUIInspector.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerGlobalsInspector.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerMainMenu.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerProjectTools.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerUpdater.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerUpgradeGuide.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerUpgradeTools.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PlayMakerWelcomeWindow.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\PreUpdateChecker.cs" />
+     <Compile Include="Assets\PlayMaker\Editor\ReportWindow.cs" />
+     <Compile Include="Assets\Stages\Toon_Level_Kit\Resources\Scripts\Editor\ButterflyInspector.cs" />
+     <Compile Include="Assets\Stages\Toon_Level_Kit\Resources\Scripts\Editor\MaxAtlasSize.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USApplyForceEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USAttachToParentEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USDisplayImageEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USEnableComponentEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USEnableObjectEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USEventBaseInspector.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USFadeScreenEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USLookAtObjectEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USMatchObjectEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USMessageEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USPauseResumeAudioEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USPlayAdvancedAnimEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USPlayAnimEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USPlayAudioEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USSetPlaybackRateEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USSpawnPrefabEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USTimeScaleEventEditor.cs" />
+     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USWarpToObjectEditor.cs" />
+     <Compile Include="Assets\iTween\PlayMaker\Editor\iTweenMoveToActionEditor.cs" />
+     <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
+     <None Include="Assets\WellFired\shared\Installer Data\changelist.txt" />
+     <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
+     <None Include="Assets\NGUI\ReadMe - 3.6.1.txt" />
+     <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 2.shader" />
+     <None Include="Assets\Plugins\Demigiant\DOTweenPro\readme.txt" />
+     <None Include="Assets\NGUI\Examples\Models\Orc\Orc Skin.shader" />
+     <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />
+     <None Include="Assets\Stages\Toon_Level_Kit\Resources\Shaders\Vegetation.shader" />
+     <None Include="Assets\WellFired\shared\Uncompiled\Resources\Transitions\WellFiredWipeLeft.shader" />
+     <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo14.txt" />
+     <None Include="Assets\PlayMaker\Templates\readme.txt" />
+     <None Include="Assets\PlayMaker\Readme.txt" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 1.shader" />
+     <None Include="Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.xml" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 2.shader" />
+     <None Include="Assets\WellFired\shared\Uncompiled\Resources\Transitions\WellFiredDissolve.shader" />
+     <None Include="Assets\NGUI\Examples\Shaders\Unlit - Masked Colored.shader" />
+     <None Include="Assets\WellFired\shared\Uncompiled\Resources\Transitions\WellFiredWipeDown.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
+     <None Include="Assets\Stages\Toon_Level_Kit\Resources\Shaders\Rim.shader" />
+     <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
+     <None Include="Assets\Plugins\Demigiant\DOTween\DOTween50.xml" />
+     <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
+     <None Include="Assets\EasyTouchBundle\EasyTouchControls\ReleaseNotes.txt" />
+     <None Include="Assets\WellFired\usequencer\Installer Data\changelist.txt" />
+     <None Include="Assets\Imported Assets\UnityChan\license.txt" />
+     <None Include="Assets\Stages\Toon_Level_Kit\Resources\Shaders\Vegetation-Lightmap.shader" />
+     <None Include="Assets\Stages\Toon_Level_Kit\Resources\Shaders\Glass.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 1.shader" />
+     <None Include="Assets\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
+     <None Include="Assets\Plugins\Demigiant\DOTween\DOTween46.xml" />
+     <None Include="Assets\EasyTouchBundle\EasyTouchControls\Documentation\Version 2.0.txt" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 3.shader" />
+     <None Include="Assets\WellFired\shared\Uncompiled\Resources\Transitions\WellFiredWipeUp.shader" />
+     <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Normal.txt" />
+     <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 2.shader" />
+     <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
+     <None Include="Assets\EasyTouchBundle\EasyTouch\_Documentation\How to migrate from EasyTouch 4.X.txt" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 3.shader" />
+     <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 2.shader" />
+     <None Include="Assets\EasyTouchBundle\Readme.txt" />
+     <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 1.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored.shader" />
+     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
+     <None Include="Assets\Imported Assets\UnityChan\Stage\Shader\AlphaMask.shader" />
+     <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
+     <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
+     <None Include="Assets\Stages\Toon_Level_Kit\Resources\Shaders\Leave.shader" />
+     <None Include="Assets\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text.shader" />
+     <None Include="Assets\Plugins\Demigiant\DOTween\DOTween43.xml" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed.shader" />
+     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
+     <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
+     <None Include="Assets\PlayMaker\Resources\PlayMakerAssemblies.txt" />
+     <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
+     <None Include="Assets\EasyTouchBundle\EasyTouchControls\Issues in button behavior (MAC).txt" />
+     <None Include="Assets\WellFired\shared\Installer Data\version.txt" />
+     <None Include="Assets\NGUI\Examples\Shaders\Unlit - Additive Colored.shader" />
+     <None Include="Assets\WellFired\shared\Uncompiled\Resources\Transitions\WellFiredWipeRight.shader" />
+     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
+     <None Include="Assets\WellFired\shared\Installer Data\upgradenotes.txt" />
+     <None Include="Assets\PlayMaker\Editor\Install\readme.txt" />
+     <None Include="Assets\EasyTouchBundle\EasyTouch\RealseNotes.txt" />
+     <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
+     <None Include="Assets\NGUI\Examples\Shaders\Refractive.shader" />
+     <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth.shader" />
+     <None Include="Assets\WellFired\usequencer\Installer Data\version.txt" />
+     <None Include="Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
+     <None Include="Assets\WellFired\usequencer\Installer Data\upgradenotes.txt" />
+     <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
+     <None Include="Assets\EasyTouchBundle\EasyTouch\How to migrate from EasyTouch 4.X.txt" />
+     <None Include="Assets\Plugins\Demigiant\readme_DOTweenPro.txt" />
+     <None Include="Assets\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />
+     <None Include="Assets\PlayMaker\Versions\readme.txt" />
+     <None Include="Assets\WellFired\usequencer\Uncompiled\Resources\uSequencer - License.txt" />
+     <None Include="Assets\NGUI\Examples\Resources\Localization.txt" />
+ <Reference Include="Assembly-UnityScript">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Networking">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TestRunner">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TreeEditor">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Analytics">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.HoloLens">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Purchasing">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.VR">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VR">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>/Applications/Unity5.6.2f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>/Applications/Unity5.6.2f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WebGL.Extensions">
+ <HintPath>/Applications/Unity5.6.2f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.OSXStandalone.Extensions">
+ <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="ConditionalExpression">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/PlayMaker/ConditionalExpression.dll</HintPath>
+ </Reference>
+ <Reference Include="ConditionalExpressionEditor">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/PlayMaker/Editor/ConditionalExpressionEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/PlayMaker/Editor/PlayMakerEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditorResources">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/PlayMaker/Editor/PlayMakerEditorResources.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMaker">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/PlayMaker/PlayMaker.dll</HintPath>
+ </Reference>
+ <Reference Include="sharedEditor">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/WellFired/shared/Compiled/Editor/sharedEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="sharedRuntime">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/WellFired/shared/Compiled/Runtime/sharedRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="usequencerEditor">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/WellFired/usequencer/Compiled/Editor/usequencerEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="usequencerRuntime">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/WellFired/usequencer/Compiled/Runtime/usequencerRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="DemiLib">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/Demigiant/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/Demigiant/DOTween/DOTween50.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenProEditor">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenPro">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ </Reference>
+ <Reference Include="DemiEditor">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/Demigiant/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>/Applications/Unity5.6.2f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>/Applications/Unity5.6.2f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{5C535DFB-8967-6D18-1A40-F43C67A49096}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{81CEC52C-A980-9B17-CC37-86F02C07F3D0}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{B47AB4BE-39D8-6020-C5E5-B9E9DAC41BD0}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

@@ -14,7 +14,7 @@ public class EnemyCharacter : MonoBehaviour {
 
 	public CharacterController controller;
 
-	private PlayerCharacter player;
+	public PlayerCharacter player;
 
 	private Animator animator;
 
@@ -23,18 +23,18 @@ public class EnemyCharacter : MonoBehaviour {
 	private CharacterAttribute attribute;
 
 	private bool isFoundPlayer;
-	private bool isAttacking;
+	public bool isAttacking;
 	private float attackTimer;
 
 	public float AttackInterval = 3f;
 
-	private UnityEngine.AI.NavMeshAgent navAgent = null;
+	public UnityEngine.AI.NavMeshAgent navAgent = null;
 
 	private GameObject[ ] mobPoints;
 	private int mobPointIndex = -1;
 
 	// Use this for initialization
-	void Start( ) {
+	void Awake( ) {
 		//mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 		animator = GetComponent<Animator>( );
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacter>();
@@ -60,38 +60,59 @@ public class EnemyCharacter : MonoBehaviour {
 			attackTimer -= Time.deltaTime;
 
 		AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
-		isAttacking = false;
-		for(int i=1; i<attackNumber; i++ ) {
-			if( state.IsName("Attack" + i) ) {
-				isAttacking = true;
-				break;
-			}
-		}
+//		isAttacking = false;
+//		for(int i=1; i<attackNumber; i++ ) {
+//			if( state.IsName("Attack" + i) ) {
+//				isAttacking = true;
+//				break;
+//			}
+//		}
+////		Debug.Log(animator.GetBool("run"));
+//		if ( isAttacking ) {
+////			animator.SetBool("run", false);
+//			return;
+//		}
 
-		Debug.Log(animator.GetBool("run"));
-		if ( isAttacking ) {
-			animator.SetBool("run", false);
-			return;
-		}
+//		if ( IsInAttackRange() && attackTimer < 0 ) {       // attack state
+//			attackTimer = AttackInterval;
+////			animator.SetBool("run", false);
+//			animator.SetBool("attack" + Random.Range(1, attackNumber + 1).ToString( ), true);
+//			navAgent.Stop( );
+//		} else if ( IsInSearchRange() ) {                                    // Found
+//			navAgent.Resume( );
+//			navAgent.SetDestination(player.gameObject.transform.position);
+////			animator.SetBool("run", true);
+//		} 
 
-		if ( InRange(attribute.attackDistance) && attackTimer < 0 ) {       // attack state
-			navAgent.Stop( );
-			attackTimer = AttackInterval;
-			animator.SetBool("run", false);
-			animator.SetBool("attack" + Random.Range(1, attackNumber + 1).ToString( ), true);
-		} else if ( InRange(searchRange) ) {                                    // Found
-			navAgent.Resume( );
-			navAgent.SetDestination(player.gameObject.transform.position);
-			animator.SetBool("run", true);
-		} else if ( navAgent.remainingDistance < 1 ) {       // arrive at one patrol point
-			navAgent.Resume( );
-			mobPointIndex = ( mobPointIndex + 1 ) % mobPoints.Length;
-			navAgent.SetDestination(mobPoints[mobPointIndex].transform.position);
-			animator.SetBool("run", true);
-		}
+//		else if ( navAgent.remainingDistance < 1 ) {       // arrive at one patrol point
+//			navAgent.Resume( );
+//			mobPointIndex = ( mobPointIndex + 1 ) % mobPoints.Length;
+//			navAgent.SetDestination(mobPoints[mobPointIndex].transform.position);
+////			animator.SetBool("run", true);
+//		}
 
-		
+//		if (isRunable) {
+////			animator.SetBool("run", true);
+//			navAgent.Resume ();
+//		} else {
+////			animator.SetBool("run", false);
+//			navAgent.Stop();
+//		}
 		//Debug.Log(InRange( ));
+	}
+
+	public bool IsInSearchRange(){
+		return InRange (searchRange);
+	}
+
+	public bool IsInAttackRange(){
+		return InRange (attribute.attackDistance);
+	}
+
+	Transform mTarget;
+	public void MoveToTarget(){
+		mTarget = player.gameObject.transform;
+		navAgent.SetDestination(mTarget.position);
 	}
 
 	bool InRange(float range) {
