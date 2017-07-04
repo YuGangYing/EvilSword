@@ -6,7 +6,6 @@ public class DeathState : StateMachineBehaviour {
 
 	override public void OnStateEnter (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-//		Destroy (animator.gameObject,stateInfo.length - 0.1f);
 		animator.speed = 0.3f;
 	}
 
@@ -17,9 +16,6 @@ public class DeathState : StateMachineBehaviour {
 
 	override public void OnStateUpdate (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-		if (stateInfo.normalizedTime == stateInfo.length) {
-			Destroy (animator.gameObject);
-		}
 		animator.speed = Mathf.Min (1,animator.speed + Time.deltaTime / 10);
 	}
 

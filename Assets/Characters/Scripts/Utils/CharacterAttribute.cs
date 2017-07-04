@@ -76,8 +76,14 @@ public class CharacterAttribute : MonoBehaviour {
 
 		GameObject effect = Instantiate(damageEffect) as GameObject;
 		//effect.transform.SetParent(effectContainer.transform);
-		effect.transform.position = this.gameObject.transform.position;
-		effect.transform.position += new Vector3(0, 1, 0);
+		if (gameObject.GetComponent<PlayerCharacter>()!=null) {
+			Transform trans = transform.Find ("fight_unitychan/Character1_Reference/Character1_Hips");
+			trans = trans.GetChild (Random.Range (0, trans.childCount));
+			effect.transform.position = trans.position + new Vector3 (0, Random.Range (-0.3f, 0.3f), 0);
+		} else {
+			effect.transform.position = transform.position + new Vector3 (0, Random.Range (0.3f, 0.6f), 0);
+		}
+//		effect.transform.position += new Vector3(0, 1, 0);
 		Destroy(effect, 2f);
 
 		this.HP -= int.Parse(str);

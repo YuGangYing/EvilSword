@@ -37,6 +37,7 @@ public class EnemyCharacter : MonoBehaviour {
 	void Awake( ) {
 		//mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 		animator = GetComponent<Animator>( );
+
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacter>();
 		player.allEnemies.Add(this.gameObject);
 		attackTimer = AttackInterval;
@@ -156,8 +157,11 @@ public class EnemyCharacter : MonoBehaviour {
 
 	private void Death( ) {
 		animator.SetBool("death", true);
-
 		Destroy(this.gameObject, 3);
+	}
+
+	public void OnDeadDone(int param){
+		Debug.Log ("OnDeadDone");
 	}
 
 }
