@@ -8,6 +8,9 @@ namespace HutongGames.PlayMaker.Actions
 	[ActionCategory(ActionCategory.ScriptControl)]
 	public class AttackStandbyAction : FsmStateAction
 	{
+		public float mRoarInterval = 3;
+		float mRoarEnergy ;
+		float mNextRoarTime;
 
 		public override void Awake ()
 		{
@@ -17,17 +20,26 @@ namespace HutongGames.PlayMaker.Actions
 		public override void OnEnter ()
 		{
 			Fsm.GameObject.GetComponent<EnemyCharacter> ().navAgent.isStopped = true;
+			mNextRoarTime = Time.time + mRoarInterval;
 			base.OnEnter ();
 		}
 
 		public override void OnUpdate ()
 		{
+			mRoarEnergy += Time.deltaTime;
 			EnemyCharacter enemyCharacter = Fsm.GameObject.GetComponent<EnemyCharacter> ();
 			if (enemyCharacter.IsInAttackRange ()) {
 				Fsm.Event ("OnAttack");
 			} else if (enemyCharacter.IsInSearchRange ()) {
 				Fsm.Event ("OnRunToTarget");
-			} 
+			} else {
+				if(mNextRoarTime < Time.time){
+					if(Random.Range(0,10) < mRoarEnergy){
+						mRoarEnergy = 0;
+						Fsm.Event ("OnRoarDone");
+					}
+				}
+			}
 			base.OnUpdate ();
 		}
 
