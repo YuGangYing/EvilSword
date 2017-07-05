@@ -230,6 +230,15 @@
      <Compile Include="Assets\PlayMaker\Editor\PlayMakerWelcomeWindow.cs" />
      <Compile Include="Assets\PlayMaker\Editor\PreUpdateChecker.cs" />
      <Compile Include="Assets\PlayMaker\Editor\ReportWindow.cs" />
+     <Compile Include="Assets\Scripts\animation\Editor\AnimatiorUtility.cs" />
+     <Compile Include="Assets\Scripts\assetbundle\Editor\ABSetting.cs" />
+     <Compile Include="Assets\Scripts\assetbundle\Editor\AssetBundleInfo.cs" />
+     <Compile Include="Assets\Scripts\assetbundle\Editor\AssetBundleInfoManager.cs" />
+     <Compile Include="Assets\Scripts\assetbundle\Editor\AssetBundlePacker.cs" />
+     <Compile Include="Assets\Scripts\assetbundle\Editor\AssetBundleWindow.cs" />
+     <Compile Include="Assets\Scripts\assetbundle\Editor\CopyCSV.cs" />
+     <Compile Include="Assets\Scripts\csv\Editor\CSVToJsonWin.cs" />
+     <Compile Include="Assets\Scripts\csv\Editor\CreateClassFromCSV.cs" />
      <Compile Include="Assets\Stages\Toon_Level_Kit\Resources\Scripts\Editor\ButterflyInspector.cs" />
      <Compile Include="Assets\Stages\Toon_Level_Kit\Resources\Scripts\Editor\MaxAtlasSize.cs" />
      <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Editor\USApplyForceEventEditor.cs" />
@@ -457,6 +466,9 @@
  </Reference>
  <Reference Include="usequencerRuntime">
  <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/WellFired/usequencer/Compiled/Runtime/usequencerRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="CSV">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/CSV/CSV.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity5.6.2f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

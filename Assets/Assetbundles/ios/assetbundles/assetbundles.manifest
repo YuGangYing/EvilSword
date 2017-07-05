@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1907315128
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: prefab_chan.assetbundle
+      Dependencies: {}
+    Info_1:
+      Name: prefab_goblin.assetbundle
+      Dependencies: {}
+    Info_2:
+      Name: prefab_troll.assetbundle
+      Dependencies: {}
+    Info_3:
+      Name: prefab_scene_halloween.assetbundle
+      Dependencies: {}

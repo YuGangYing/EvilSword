@@ -1,0 +1,62 @@
+ManifestFileVersion: 0
+CRC: 2327021528
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2eeacb8c7d1c7487a97aab6278d5c936
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e174750f546e89f68aa69cdcf46811e5
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 102
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe505584d3b2024459e01b2599bad578, type: 3}
+- Class: 114
+  Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4676fde591e25473298c9830de3df8ac, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dbed8f1bdad3441c8959647d53f9ec48, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 734df6dd88dec754998b64a6e4c4c4a5, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 143
+  Script: {instanceID: 0}
+- Class: 195
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/ArtAssets/Units/Prefabs/TrollPrefab.prefab
+Dependencies: []

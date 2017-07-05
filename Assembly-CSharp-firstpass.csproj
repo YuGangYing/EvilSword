@@ -204,6 +204,9 @@
  <Reference Include="usequencerRuntime">
  <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/WellFired/usequencer/Compiled/Runtime/usequencerRuntime.dll</HintPath>
  </Reference>
+ <Reference Include="CSV">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/CSV/CSV.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

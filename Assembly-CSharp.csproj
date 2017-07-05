@@ -1038,26 +1038,39 @@
      <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenStop.cs" />
      <Compile Include="Assets\PlayMaker\Include\iTweenFSMEvents.cs" />
      <Compile Include="Assets\PlayMaker\UpdateHelper.cs" />
-     <Compile Include="Assets\Scripts\Animation\AnimStatusMachine.cs" />
-     <Compile Include="Assets\Scripts\Animation\AnimatorManager.cs" />
-     <Compile Include="Assets\Scripts\AnimationStates\AttackStandbyState.cs" />
-     <Compile Include="Assets\Scripts\AnimationStates\AttackState.cs" />
-     <Compile Include="Assets\Scripts\AnimationStates\DeathState.cs" />
-     <Compile Include="Assets\Scripts\AnimationStates\RunToTargetState.cs" />
-     <Compile Include="Assets\Scripts\Battle\PlayerController\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Battle\ResourceManager\ResourceManager.cs" />
-     <Compile Include="Assets\Scripts\Battle\SpawnManager\SpawnManager.cs" />
-     <Compile Include="Assets\Scripts\SingleTon\SingleMonoBehivour.cs" />
-     <Compile Include="Assets\Scripts\Triggers\Trigger.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\AttackAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\AttackStandbyAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\BaseUnitAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\BeatenAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\DeathAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\JumpAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\RoarAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\RunToTargetAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\WalkToTargetAction.cs" />
+     <Compile Include="Assets\Scripts\animation\AnimStatusMachine.cs" />
+     <Compile Include="Assets\Scripts\animation\AnimatorManager.cs" />
+     <Compile Include="Assets\Scripts\animationStates\AttackStandbyState.cs" />
+     <Compile Include="Assets\Scripts\animationStates\AttackState.cs" />
+     <Compile Include="Assets\Scripts\animationStates\DeathState.cs" />
+     <Compile Include="Assets\Scripts\animationStates\RunToTargetState.cs" />
+     <Compile Include="Assets\Scripts\assetbundle\TestAB.cs" />
+     <Compile Include="Assets\Scripts\battle\PlayerController\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\battle\ResourceManager\ResourceManager.cs" />
+     <Compile Include="Assets\Scripts\battle\SpawnManager\SpawnManager.cs" />
+     <Compile Include="Assets\Scripts\constant\APIConstant.cs" />
+     <Compile Include="Assets\Scripts\constant\GameConstant.cs" />
+     <Compile Include="Assets\Scripts\constant\PathConstant.cs" />
+     <Compile Include="Assets\Scripts\csv\CSVFileReader.cs" />
+     <Compile Include="Assets\Scripts\csv\CSVParser.cs" />
+     <Compile Include="Assets\Scripts\csv\CSVReader.cs" />
+     <Compile Include="Assets\Scripts\csv\VersionCSV.cs" />
+     <Compile Include="Assets\Scripts\csv\structure\ConventionCSVStructure.cs" />
+     <Compile Include="Assets\Scripts\csv\structure\NGCSVStructure.cs" />
+     <Compile Include="Assets\Scripts\csv\structure\VersionCSVStructure.cs" />
+     <Compile Include="Assets\Scripts\file\FileManager.cs" />
+     <Compile Include="Assets\Scripts\file\SoCsv.cs" />
+     <Compile Include="Assets\Scripts\singleTon\SingleMonoBehivour.cs" />
+     <Compile Include="Assets\Scripts\triggers\Trigger.cs" />
+     <Compile Include="Assets\Scripts\unitActions\AttackAction.cs" />
+     <Compile Include="Assets\Scripts\unitActions\AttackStandbyAction.cs" />
+     <Compile Include="Assets\Scripts\unitActions\BaseUnitAction.cs" />
+     <Compile Include="Assets\Scripts\unitActions\BeatenAction.cs" />
+     <Compile Include="Assets\Scripts\unitActions\DeathAction.cs" />
+     <Compile Include="Assets\Scripts\unitActions\JumpAction.cs" />
+     <Compile Include="Assets\Scripts\unitActions\RoarAction.cs" />
+     <Compile Include="Assets\Scripts\unitActions\RunToTargetAction.cs" />
+     <Compile Include="Assets\Scripts\unitActions\WalkToTargetAction.cs" />
      <Compile Include="Assets\Stages\Camera\MinimapPosition.cs" />
      <Compile Include="Assets\Stages\Camera\SmallMap.cs" />
      <Compile Include="Assets\Stages\Camera\arrow_height.cs" />
@@ -1277,6 +1290,9 @@
  </Reference>
  <Reference Include="usequencerRuntime">
  <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/WellFired/usequencer/Compiled/Runtime/usequencerRuntime.dll</HintPath>
+ </Reference>
+ <Reference Include="CSV">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/CSV/CSV.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
