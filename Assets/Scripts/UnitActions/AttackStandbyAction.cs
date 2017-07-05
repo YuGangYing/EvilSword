@@ -34,9 +34,11 @@ namespace HutongGames.PlayMaker.Actions
 				Fsm.Event ("OnRunToTarget");
 			} else {
 				if(mNextRoarTime < Time.time){
-					if(Random.Range(0,10) < mRoarEnergy){
-						mRoarEnergy = 0;
-						Fsm.Event ("OnRoarDone");
+					mNextRoarTime = Time.time + mRoarInterval;
+					if (Random.Range (0, 10) < 5) {
+						Fsm.Event ("OnRoar");
+					} else {
+						Fsm.Event ("OnJump");
 					}
 				}
 			}

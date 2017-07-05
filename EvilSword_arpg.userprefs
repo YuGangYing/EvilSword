@@ -1,15 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Characters/Scripts/Enemy/EnemyCharacter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Characters/Scripts/GamePlayer/PlayerUserControl.cs">
     <Files>
-      <File FileName="Assets/Scripts/UnitActions/AttackAction.cs" Line="25" Column="100" />
-      <File FileName="Assets/Scripts/UnitActions/AttackStandbyAction.cs" Line="26" Column="38" />
-      <File FileName="Assets/Scripts/UnitActions/RunToTargetAction.cs" Line="31" Column="38" />
-      <File FileName="Assets/Characters/Scripts/Enemy/EnemyCharacter.cs" Line="160" Column="31" />
-      <File FileName="Assets/Characters/Scripts/Utils/CharacterAttribute.cs" Line="84" Column="92" />
-      <File FileName="Assets/Scripts/AnimationStates/AttackState.cs" Line="13" Column="1" />
-      <File FileName="Assets/Scripts/AnimationStates/DeathState.cs" Line="9" Column="1" />
-      <File FileName="Assets/Characters/Scripts/GamePlayer/PlayerCharacter.cs" Line="134" Column="23" />
+      <File FileName="Assets/Characters/Scripts/Utils/BaseCharacter.cs" Line="60" Column="15" />
+      <File FileName="Assets/Characters/Scripts/GamePlayer/PlayerUserControl.cs" Line="43" Column="2" />
+      <File FileName="Assets/Scripts/Battle/PlayerController/PlayerController.cs" Line="9" Column="26" />
+      <File FileName="Assets/EasyTouchBundle/EasyTouchControls/Plugins/ETCInput.cs" Line="907" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

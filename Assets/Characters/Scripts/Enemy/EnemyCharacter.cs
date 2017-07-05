@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using HutongGames.PlayMaker.Actions;
+using HutongGames.PlayMaker;
 
 public class EnemyCharacter : MonoBehaviour {
 
@@ -33,11 +35,14 @@ public class EnemyCharacter : MonoBehaviour {
 	private GameObject[ ] mobPoints;
 	private int mobPointIndex = -1;
 
+	PlayMakerFSM mFsm;
+
+
 	// Use this for initialization
 	void Awake( ) {
 		//mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 		animator = GetComponent<Animator>( );
-
+		mFsm = GetComponent<PlayMakerFSM> ();
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacter>();
 		player.allEnemies.Add(this.gameObject);
 		attackTimer = AttackInterval;
@@ -53,14 +58,15 @@ public class EnemyCharacter : MonoBehaviour {
 	// Update is called once per frame
 	void Update( ) {
 		if ( attribute.IsDeath ) {
-			Death( );
+			if(mFsm.Fsm.ActiveStateName!="Death")
+				mFsm.Fsm.Event ("OnDead");
 			return;
 		}
 
-		if ( attackTimer > 0 )
-			attackTimer -= Time.deltaTime;
-
-		AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
+//		if ( attackTimer > 0 )
+//			attackTimer -= Time.deltaTime;
+//
+//		AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
 //		isAttacking = false;
 //		for(int i=1; i<attackNumber; i++ ) {
 //			if( state.IsName("Attack" + i) ) {
@@ -128,11 +134,10 @@ public class EnemyCharacter : MonoBehaviour {
 		if ( attribute.IsDeath )
 			return;
 
+		mFsm.Fsm.Event ("OnBeaten");
+
 		int damage = (int)Random.Range(100, 200);
 		bool critical = damage > 150;
-
-		animator.SetBool("hurt", true);
-
 		attribute.TakeDamage(damage.ToString(), critical);
 
 		if ( critical )
@@ -155,10 +160,10 @@ public class EnemyCharacter : MonoBehaviour {
 
 	}
 
-	private void Death( ) {
-		animator.SetBool("death", true);
-		Destroy(this.gameObject, 3);
-	}
+//	private void Death( ) {
+//		animator.SetBool("death", true);
+//		Destroy(this.gameObject, 3);
+//	}
 
 	public void OnDeadDone(int param){
 		Debug.Log ("OnDeadDone");

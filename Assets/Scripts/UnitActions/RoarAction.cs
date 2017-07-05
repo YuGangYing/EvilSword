@@ -2,30 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace HutongGames.PlayMaker.Actions
 {
 	[ActionCategory (ActionCategory.ScriptControl)]
-	public class RoarAction : FsmStateAction {
+	public class RoarAction : BaseUnitAction
+	{
 
 		public override void Awake ()
 		{
 			base.Awake ();
 		}
 
+		float mExitTime;
+
 		public override void OnEnter ()
 		{
 			Fsm.GameObject.GetComponent<EnemyCharacter> ().navAgent.isStopped = true;
 			Animator animator = Fsm.GameObject.GetComponent<Animator> ();
-			animator.SetBool ("roar", true);
+			Fsm.GameObject.GetComponent<Animator> ().PlayInFixedTime (this.animatorStateName);
+			mExitTime = Time.time + Fsm.GameObject.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).length;
 			base.OnEnter ();
 		}
 
 		public override void OnUpdate ()
 		{
-			Animator animator = Fsm.GameObject.GetComponent<Animator> ();
-			if ( !animator.GetBool("roar") && Fsm.GameObject.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).IsName ("Base Layer.Attack_standby")) {
-				Fsm.Event ("OnRoarDone");
+			if (mExitTime < Time.time) {
+				Fsm.Event (this.onActionDoneEvent);
 			}
 			base.OnUpdate ();
 		}
