@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3587427841
+CRC: 2372230645
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7086136ae445016ac6235d5f85d46da3
+    Hash: e2363f84495fc6032b63b40aeffd1896
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 244eb304b1bd5c8c7767bb54676b4890
+    Hash: 37ae2c3846a8c14c7a61d98a85e583ac
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -27,27 +27,7 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 64
   Script: {instanceID: 0}
-- Class: 65
-  Script: {instanceID: 0}
-- Class: 82
-  Script: {instanceID: 0}
-- Class: 83
-  Script: {instanceID: 0}
 - Class: 108
-  Script: {instanceID: 0}
-- Class: 111
-  Script: {instanceID: 0}
-- Class: 114
-  Script: {fileID: 11500000, guid: 8bf822921e3a40942b5cb9a1ba386701, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: a1516416d2a32ee45a00a139d25d6126, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: b616393c6cf864ad3a8e7a7d8ca2c9f1, type: 3}
-- Class: 115
-  Script: {instanceID: 0}
-- Class: 198
-  Script: {instanceID: 0}
-- Class: 199
   Script: {instanceID: 0}
 Assets:
 - Assets/ArtAssets/Scenes/Halloween.prefab
