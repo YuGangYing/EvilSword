@@ -209,6 +209,9 @@
  <Reference Include="PlayMakerEditorResources">
  <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/PlayMaker/Editor/PlayMakerEditorResources.dll</HintPath>
  </Reference>
+ <Reference Include="CSV">
+ <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/CSV/CSV.dll</HintPath>
+ </Reference>
  <Reference Include="DemiLib">
  <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
  </Reference>
@@ -250,9 +253,6 @@
  </Reference>
  <Reference Include="usequencerRuntime">
  <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/WellFired/usequencer/Compiled/Runtime/usequencerRuntime.dll</HintPath>
- </Reference>
- <Reference Include="CSV">
- <HintPath>/Users/yingyugang/EvilSword_arpg/Assets/Plugins/CSV/CSV.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
