@@ -1,0 +1,5 @@
+"id","product_id","platform_type","platform_name","name","description","image_resouce_name","coin","free_coin","jpy_amount"
+1,"jp.co.d2cr.kkt.test.001",1,"IOS","こえだま1個","こえだま1個","",1,0,120
+2,"jp.co.d2cr.kkt.test.002",1,"IOS","こえだま11個","こえだま10個+おまけ１個","",10,1,1200
+3,"jp.co.d2cr.kkt.test.001",2,"ANDROID","こえだま1個","こえだま1個","",1,0,120
+4,"jp.co.d2cr.kkt.test.002",2,"ANDROID","こえだま11個","こえだま10個+おまけ１個","",10,1,1200
