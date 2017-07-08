@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3709885461
+CRC: 3033428698
 Hashes:
   AssetFileHash:
     serializedVersion: 2
@@ -118,5 +118,5 @@ ClassTypes:
 - Class: 224
   Script: {instanceID: 0}
 Assets:
-- Assets/ArtAssets/Units/Prefabs/ChanPrefab.prefab
+- Assets/AssetUnits/Prefabs/ChanPrefab.prefab
 Dependencies: []

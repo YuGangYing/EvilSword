@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 93638674
+CRC: 1065388914
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -15,6 +15,9 @@ AssetBundleManifest:
       Name: prefab_scene_halloween.assetbundle
       Dependencies: {}
     Info_4:
-      Name: scene_halloween.assetbundle
+      Name: scene01.assetbundle
       Dependencies:
         Dependency_0: prefab_scene_halloween.assetbundle
+    Info_5:
+      Name: scene02.assetbundle
+      Dependencies: {}

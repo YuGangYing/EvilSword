@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 1211677547
+CRC: 1410176084
 Hashes:
   AssetFileHash:
     serializedVersion: 2
@@ -56,5 +56,5 @@ ClassTypes:
 - Class: 199
   Script: {instanceID: 0}
 Assets:
-- Assets/ArtAssets/Units/Prefabs/GoblinPrefab.prefab
+- Assets/AssetUnits/Prefabs/GoblinPrefab.prefab
 Dependencies: []

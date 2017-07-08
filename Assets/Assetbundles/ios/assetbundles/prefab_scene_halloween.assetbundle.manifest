@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2372230645
+CRC: 991706932
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e2363f84495fc6032b63b40aeffd1896
+    Hash: 8887d870ac86e18ef8003bf67952893a
   TypeTreeHash:
     serializedVersion: 2
     Hash: 37ae2c3846a8c14c7a61d98a85e583ac
@@ -30,5 +30,5 @@ ClassTypes:
 - Class: 108
   Script: {instanceID: 0}
 Assets:
-- Assets/ArtAssets/Scenes/Halloween.prefab
+- Assets/AssetScenes/Scene01/Prefabs/Halloween.prefab
 Dependencies: []

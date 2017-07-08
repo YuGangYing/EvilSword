@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2229511060
+CRC: 1120064402
 Hashes:
   AssetFileHash:
     serializedVersion: 2
@@ -58,5 +58,5 @@ ClassTypes:
 - Class: 199
   Script: {instanceID: 0}
 Assets:
-- Assets/ArtAssets/Units/Prefabs/TrollPrefab.prefab
+- Assets/AssetUnits/Prefabs/TrollPrefab.prefab
 Dependencies: []
