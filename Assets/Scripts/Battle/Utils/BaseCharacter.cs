@@ -27,6 +27,7 @@ public abstract class BaseCharacter : MonoBehaviour {
 	protected Rigidbody m_Rigidbody;
 	protected Animator m_Animator;
 	protected bool m_IsGrounded;
+	protected bool m_DoubleJump;
 	protected float m_OrigGroundCheckDistance;
 	protected const float k_Half = 0.5f;
 	protected float m_TurnAmount;
@@ -63,9 +64,11 @@ public abstract class BaseCharacter : MonoBehaviour {
 		ApplyExtraTurnRotation( );
 
 		// control and velocity handling is different when grounded and airborne:
-		if ( m_IsGrounded ) {
+//		if ( m_IsGrounded ) {
 			HandleGroundedMovement(crouch, jump);
-		} else {
+//		}
+//		else {
+		if(!m_IsGrounded){
 			HandleAirborneMovement( );
 		}
 
@@ -114,6 +117,12 @@ public abstract class BaseCharacter : MonoBehaviour {
 
 	protected virtual void UpdateAnimator( Vector3 move) {
 		// update the animator parameters
+
+		if (Mathf.Abs (m_ForwardAmount) < 0.1f) {
+			m_ForwardAmount = 0;
+		} else {
+			m_ForwardAmount = Mathf.Clamp (m_ForwardAmount*10,-1,1);
+		}
 		m_Animator.SetFloat("Forward", m_ForwardAmount, 0.1f, Time.deltaTime);
 		m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
 		m_Animator.SetBool("Crouch", m_Crouching);
@@ -135,6 +144,7 @@ public abstract class BaseCharacter : MonoBehaviour {
 
 		if ( m_IsGrounded ) {
 			m_Animator.SetFloat("JumpLeg", jumpLeg);
+			m_DoubleJump = false;
 		}
 
 		// the anim speed multiplier allows the overall speed of walking/running to be tweaked in the inspector,
@@ -159,9 +169,14 @@ public abstract class BaseCharacter : MonoBehaviour {
 
 	protected void HandleGroundedMovement( bool crouch, bool jump ) {
 		// check whether conditions are right to allow a jump:
-		if ( jump && !crouch && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded") ) {
+		if ( jump && !crouch) {// && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded") ) {
 			// jump!
-			m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x * 1.2f, m_JumpPower, m_Rigidbody.velocity.z * 1.2f);
+			if (m_IsGrounded)
+				m_Rigidbody.velocity = new Vector3 (m_Rigidbody.velocity.x * 1.2f, m_JumpPower, m_Rigidbody.velocity.z * 1.2f);
+			else if (!m_DoubleJump) {
+				m_Rigidbody.velocity = new Vector3 (transform.forward.x * m_JumpPower, m_JumpPower, transform.forward.z * m_JumpPower);
+				m_DoubleJump = true;
+			}
 			m_IsGrounded = false;
 			m_Animator.applyRootMotion = false;
 			m_GroundCheckDistance = 0.1f;

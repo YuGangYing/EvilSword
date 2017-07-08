@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace HutongGames.PlayMaker.Actions
 {
@@ -15,12 +16,12 @@ namespace HutongGames.PlayMaker.Actions
 		public override void OnEnter ()
 		{
 			Debug.Log ("DeathAction");
-			Fsm.GameObject.GetComponent<EnemyCharacter> ().navAgent.isStopped = false;
+			Fsm.GameObject.GetComponent<NavMeshAgent> ().isStopped = true;
 			if (!string.IsNullOrEmpty (animatorStateName)) {
-				Animator animator = Fsm.GameObject.GetComponent<Animator> ();
+				Animator animator = Fsm.GameObject.GetComponentInChildren<Animator> (true);
 				animator.PlayInFixedTime (animatorStateName);
-				mExitTime = Time.time + Fsm.GameObject.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).length;
-				GameObject.Destroy (Fsm.GameObject,Fsm.GameObject.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).length + 2);
+				mExitTime = Time.time + Fsm.GameObject.GetComponentInChildren<Animator> (true).GetCurrentAnimatorStateInfo (0).length;
+				GameObject.Destroy (Fsm.GameObject,Fsm.GameObject.GetComponentInChildren<Animator> (true).GetCurrentAnimatorStateInfo (0).length + 2);
 			}
 
 			base.OnEnter ();
@@ -31,7 +32,7 @@ namespace HutongGames.PlayMaker.Actions
 			if (mExitTime < Time.time) {
 				if(!string.IsNullOrEmpty(onActionDoneEvent))
 					Fsm.Event (onActionDoneEvent);
-				Fsm.GameObject.GetComponent<Animator> ().PlayInFixedTime("Base Layer.Death2");
+				Fsm.GameObject.GetComponentInChildren<Animator> (true).PlayInFixedTime("Base Layer.Death2");
 			}
 			base.OnUpdate ();
 		}

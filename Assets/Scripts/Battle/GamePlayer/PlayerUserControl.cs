@@ -88,10 +88,12 @@ public class PlayerUserControl : MonoBehaviour
 		// read inputs
 		float h = CrossPlatformInputManager.GetAxis ("Horizontal");
 		float v = CrossPlatformInputManager.GetAxis ("Vertical");
-		if (m_ETCJoystick.axisX.axisValue != 0)
+		if (m_ETCJoystick.axisX.axisValue != 0) {
 			h = m_ETCJoystick.axisX.axisValue;
-		if (m_ETCJoystick.axisY.axisValue != 0)
+		}
+		if (m_ETCJoystick.axisY.axisValue != 0) {
 			v = m_ETCJoystick.axisY.axisValue;
+		}
 		bool crouch = Input.GetKey (KeyCode.C);
 		bool dodge = Input.GetKeyDown (KeyCode.LeftShift) || ETCInput.GetButtonDown ("Dodge");
 

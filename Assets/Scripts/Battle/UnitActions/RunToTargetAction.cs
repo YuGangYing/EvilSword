@@ -15,14 +15,14 @@ namespace HutongGames.PlayMaker.Actions
 
 		public override void OnEnter ()
 		{
-			Fsm.GameObject.GetComponent<Animator> ().SetBool ("run_to_target",true);
+			Fsm.GameObject.GetComponentInChildren<Animator> (true).SetBool ("run_to_target",true);
 			base.OnEnter ();
 		}
 
 		public override void OnUpdate ()
 		{
 			EnemyCharacter enemyCharacter = Fsm.GameObject.GetComponent<EnemyCharacter> ();
-			if (Fsm.GameObject.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).IsName ("Base Layer.RunToTarget")) {
+			if (Fsm.GameObject.GetComponentInChildren<Animator> (true).GetCurrentAnimatorStateInfo (0).IsName ("Base Layer.RunToTarget")) {
 				Fsm.GameObject.GetComponent<EnemyCharacter> ().MoveToTarget ();
 				Fsm.GameObject.GetComponent<EnemyCharacter> ().navAgent.isStopped = false;
 			} else {

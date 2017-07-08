@@ -10,7 +10,7 @@ public class AttackState : StateMachineBehaviour {
 
 	override public void OnStateExit (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-		animator.GetComponent<EnemyCharacter> ().isAttacking = false;
+		animator.GetComponentInParent<EnemyCharacter> ().isAttacking = false;
 	}
 
 	override public void OnStateUpdate (Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

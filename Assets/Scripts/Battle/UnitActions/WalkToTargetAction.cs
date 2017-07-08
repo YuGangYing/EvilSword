@@ -18,7 +18,7 @@ namespace HutongGames.PlayMaker.Actions
 		public override void OnEnter ()
 		{
 			Fsm.GameObject.GetComponent<EnemyCharacter> ().navAgent.isStopped = false;
-			Animator animator = Fsm.GameObject.GetComponent<Animator> ();
+			Animator animator = Fsm.GameObject.GetComponentInChildren<Animator> (true);
 			animator.PlayInFixedTime ("Base Layer.Walk");
 //			animator.SetBool ("run_to_target",false);
 //			animator.SetBool ("attack" + Random.Range (1, attackNumber + 1).ToString (), true);

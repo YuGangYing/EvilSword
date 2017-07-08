@@ -94,7 +94,18 @@ public class PlayerCharacter : BaseCharacter {
 
 	}
 
-	protected void WeaponAttackEnemies( ) {
+	IEnumerator _Move(){
+		Vector3 forward = transform.position + transform.forward * 0.5f;
+		float t = 0;
+		while(t<1){
+			transform.position = Vector3.Slerp (transform.position,forward,t);
+			t += Time.deltaTime * 3;
+			yield return null;
+		}
+	}
+
+	public void OnRealHit(){
+		StartCoroutine (_Move());
 		foreach ( GameObject enemy in allEnemies ) {
 			EnemyCharacter e = enemy.GetComponent<EnemyCharacter>( );
 
@@ -111,7 +122,24 @@ public class PlayerCharacter : BaseCharacter {
 				//e.BeAttacked(false);
 			}
 		}
-		return;
+	}
+
+	protected void WeaponAttackEnemies( ) {
+
+		GameObject target = null;
+		float dis = Mathf.Infinity;
+		foreach (GameObject enemy in allEnemies) {
+			if(Vector3.Distance(transform.position,enemy.transform.position) < dis){
+				if (!enemy.GetComponent<CharacterAttribute> ().IsDeath) {
+					target = enemy;
+					dis = Vector3.Distance (transform.position, enemy.transform.position);
+				}
+			}
+		}
+		if(target!=null){
+//			Quaternion qua = Quaternion.LookRotation ((target.transform.position - transform.position).normalized); 
+			transform.LookAt(target.transform);
+		}
 	}
 
 	public void UpdateAnimator(string animClip ) {
@@ -130,7 +158,7 @@ public class PlayerCharacter : BaseCharacter {
 	}
 
 	public void BeAttacked( ) {
-		this.UpdateAnimator("Damaged");
+		//this.UpdateAnimator("Damaged");
 		attribute.TakeDamage("100", false);
 
 	}

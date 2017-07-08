@@ -16,9 +16,9 @@ namespace HutongGames.PlayMaker.Actions
 		public override void OnEnter ()
 		{
 			Fsm.GameObject.GetComponent<EnemyCharacter> ().navAgent.isStopped = false;
-			Animator animator = Fsm.GameObject.GetComponent<Animator> ();
+			Animator animator = Fsm.GameObject.GetComponentInChildren<Animator> (true);
 			animator.PlayInFixedTime (animatorStateName);
-			mExitTime = Time.time + Fsm.GameObject.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).length;
+			mExitTime = Time.time + Fsm.GameObject.GetComponentInChildren<Animator> (true).GetCurrentAnimatorStateInfo (0).length;
 			base.OnEnter ();
 		}
 

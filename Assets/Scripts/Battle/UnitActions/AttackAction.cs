@@ -19,7 +19,7 @@ namespace HutongGames.PlayMaker.Actions
 		{
 			Fsm.GameObject.GetComponent<EnemyCharacter> ().navAgent.isStopped = true;
 			Fsm.GameObject.GetComponent<EnemyCharacter> ().isAttacking = true;
-			Animator animator = Fsm.GameObject.GetComponent<Animator> ();
+			Animator animator = Fsm.GameObject.GetComponentInChildren<Animator> (true);
 			animator.SetBool ("run_to_target",false);
 			animator.SetBool ("attack" + Random.Range (1, attackNumber + 1).ToString (), true);
 			Fsm.GameObject.transform.LookAt (Fsm.GameObject.GetComponent<EnemyCharacter> ().player.transform);
@@ -29,7 +29,7 @@ namespace HutongGames.PlayMaker.Actions
 		public override void OnUpdate ()
 		{
 
-			if (!Fsm.GameObject.GetComponent<EnemyCharacter> ().isAttacking && Fsm.GameObject.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).IsName ("Base Layer.Attack_standby")) {
+			if (!Fsm.GameObject.GetComponent<EnemyCharacter> ().isAttacking && Fsm.GameObject.GetComponentInChildren<Animator> (true).GetCurrentAnimatorStateInfo (0).IsName ("Base Layer.Attack_standby")) {
 				Fsm.Event ("OnAttackDone");
 			}
 //			EnemyCharacter enemyCharacter = Fsm.GameObject.GetComponent<EnemyCharacter> ();

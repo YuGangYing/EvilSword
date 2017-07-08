@@ -906,6 +906,8 @@
      <Compile Include="Assets\Scripts\AssetBundle\Downloading\DownloadingFileTypeEnum.cs" />
      <Compile Include="Assets\Scripts\AssetBundle\Downloading\DownloadingGetter.cs" />
      <Compile Include="Assets\Scripts\AssetBundle\Downloading\DownloadingManager.cs" />
+     <Compile Include="Assets\Scripts\Battle\AnimationEvent\AnimationEnemyEvent.cs" />
+     <Compile Include="Assets\Scripts\Battle\AnimationEvent\AnimationEvent.cs" />
      <Compile Include="Assets\Scripts\Battle\Enemy\EnemyCharacter.cs" />
      <Compile Include="Assets\Scripts\Battle\GamePlayer\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Battle\GamePlayer\PlayerCharacter.cs" />

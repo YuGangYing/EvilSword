@@ -55,6 +55,19 @@ public class EnemyCharacter : MonoBehaviour {
 		}
 	}
 
+	IEnumerator _Move(){
+		Vector3 forward = transform.position -transform.forward * 0.3f;
+		float t = 0;
+		while(t<1){
+			if (attribute.IsDeath)
+				yield break;
+			transform.position = Vector3.Slerp (transform.position,forward,t);
+			t += Time.deltaTime * 3;
+			yield return null;
+		}
+	}
+
+	public Vector3 direct = new Vector3 (0, 100, 0);
 	// Update is called once per frame
 	void Update( ) {
 		if ( attribute.IsDeath ) {
@@ -62,7 +75,11 @@ public class EnemyCharacter : MonoBehaviour {
 				mFsm.Fsm.Event ("OnDead");
 			return;
 		}
-
+		if (Input.GetKeyDown (KeyCode.H)) {
+			Debug.Log ("AddForce");
+//			GetComponent<Rigidbody> ().AddForce (direct);
+			StartCoroutine (_Move());
+		}
 //		if ( attackTimer > 0 )
 //			attackTimer -= Time.deltaTime;
 //
@@ -128,24 +145,35 @@ public class EnemyCharacter : MonoBehaviour {
 			return true;
 		return false;
 	}
-	
+
 	public void BeAttacked() {
 
 		if ( attribute.IsDeath )
 			return;
-
 		mFsm.Fsm.Event ("OnBeaten");
-
+		StartCoroutine (_Move());
 		int damage = (int)Random.Range(100, 200);
 		bool critical = damage > 150;
 		attribute.TakeDamage(damage.ToString(), critical);
-
+		navAgent.isStopped = true;
 		if ( critical )
 			player.Shake( );
 	}
 
-	public void Attack( ) {
+	IEnumerator _SlowDown(){
+		Time.timeScale = 0.5f;
+		yield return new WaitForSecondsRealtime(0.2f);
+		Time.timeScale = 1;
+		yield return new WaitForSecondsRealtime (5);
+		GetComponentInChildren<Animator> ().speed = 1;
+	}
 
+	public void Attack( ) {
+		if(player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Base Layer.SAMK")){
+			GetComponentInChildren<Animator> ().speed = 0.1f;
+			StartCoroutine (_SlowDown());
+			return;
+		}
 		float distance = Vector3.Distance(player.transform.position, navAgent.nextPosition);
 
 		Vector3 dir = ( player.transform.position - transform.position ).normalized;
