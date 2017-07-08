@@ -12,6 +12,7 @@ public class SpawnManager : SingleMonoBehaviour<SpawnManager> {
 	ResourceManager mResourceManager;
 	public string targetSceneAssetbundle = "halloween.assetbundle";
 	public string targetSceneName = "Halloween_Level";
+	public GameObject player;//TODO
 	protected override void Awake(){
 
 	}
@@ -21,11 +22,13 @@ public class SpawnManager : SingleMonoBehaviour<SpawnManager> {
 	}
 
 	IEnumerator LoadAdditiveScene(){
-		AssetBundle ab = AssetBundle.LoadFromFile (PathConstant.CLIENT_ASSETBUNDLES_PATH + targetSceneAssetbundle);
-		AsyncOperation asyn = SceneManager.LoadSceneAsync (targetSceneName, LoadSceneMode.Additive);
-		yield return asyn.isDone;
-		yield return null;
+//		AssetBundle ab = AssetBundle.LoadFromFile (PathConstant.CLIENT_ASSETBUNDLES_PATH + targetSceneAssetbundle);
+		AssetBundle ab = AssetBundle.LoadFromFile (PathConstant.CLIENT_STREAMING_ASSETS_PATH + "/assetbundles/" + targetSceneAssetbundle);
+		SceneManager.LoadScene (targetSceneName, LoadSceneMode.Additive);
+		yield return new WaitForSeconds(3);
 		GameObject spawnRoot = GameObject.Find ("mob_points");
+
+		player.SetActive (true);
 		mMonstarSpawnPoints = new List<Transform> ();
 		for(int i=0;i<spawnRoot.transform.childCount;i++){
 			mMonstarSpawnPoints.Add(spawnRoot.transform.GetChild (i));
@@ -36,12 +39,11 @@ public class SpawnManager : SingleMonoBehaviour<SpawnManager> {
 			monsters.Add (trans,Instantiate(mResourceManager.GetMonster(),trans.position,trans.rotation));
 			StartCoroutine (_DelayActive(monsters [trans]));
 		}
-
-		GameObject playerSpawnRoot = GameObject.Find ("player_points");
-		mPlayerSpawnPoints = new List<Transform> ();
-		for(int i=0;i<playerSpawnRoot.transform.childCount;i++){
-			mPlayerSpawnPoints.Add (playerSpawnRoot.transform.GetChild(i));
-		}
+//		GameObject playerSpawnRoot = GameObject.Find ("player_points");
+//		mPlayerSpawnPoints = new List<Transform> ();
+//		for(int i=0;i<playerSpawnRoot.transform.childCount;i++){
+//			mPlayerSpawnPoints.Add (playerSpawnRoot.transform.GetChild(i));
+//		}
 	}
 
 	void Update(){

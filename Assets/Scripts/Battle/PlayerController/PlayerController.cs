@@ -1,19 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class PlayerController : SingleMonoBehaviour<PlayerController> {
 
-	public ETCButton btn_jump;
-	public ETCButton btn_dodge;
+public class PlayerController : SingleMonoBehaviour<PlayerController>
+{
 
-	public ETCButton btn_jab;
-	public ETCButton btn_kick;
-	public ETCButton btn_rise;
-	public ETCButton btn_offence;
+	public Transform joystick;
+	public Canvas canvas;
 
-	public ETCButton btn_skill1;
-	public ETCButton btn_skill2;
-	public ETCButton btn_skill3;
-	public ETCButton btn_skill4;
+	void Update ()
+	{
+//		if (Input.touchCount > 0) {
+//			for (int i = 0; i < Input.touchCount; i++) {
+//				if (Input.GetTouch (i).position.x < Screen.width / 2 && Input.GetTouch (i).position.y < Screen.height / 2) {
+//					if (Input.GetTouch (i).phase == TouchPhase.Began) {
+//						joystick.gameObject.SetActive (true);
+//						joystick.GetComponent<RectTransform> ().anchoredPosition = RectTransformUtility.PixelAdjustPoint ((Vector2)Input.GetTouch (i).position, joystick, canvas);
+//					} else if (Input.GetTouch (i).phase == TouchPhase.Ended) {
+//						joystick.gameObject.SetActive (false);
+//					}
+//				}
+//			}
+//		}
+	}
 
 }

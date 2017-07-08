@@ -39,20 +39,13 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+      <HintPath>/Applications/Unity5.6.2f1-1/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+      <HintPath>/Applications/Unity5.6.2f1-1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Characters\Scripts\Enemy\EnemyCharacter.cs" />
-     <Compile Include="Assets\Characters\Scripts\GamePlayer\CameraShake.cs" />
-     <Compile Include="Assets\Characters\Scripts\GamePlayer\PlayerCharacter.cs" />
-     <Compile Include="Assets\Characters\Scripts\GamePlayer\PlayerUserControl.cs" />
-     <Compile Include="Assets\Characters\Scripts\GamePlayer\SimpleMouseRotator.cs" />
-     <Compile Include="Assets\Characters\Scripts\Utils\BaseCharacter.cs" />
-     <Compile Include="Assets\Characters\Scripts\Utils\CharacterAttribute.cs" />
      <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\AutoSelect\MultiLayerTouch.cs" />
      <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\AutoSelect\MultiLayerUI.cs" />
      <Compile Include="Assets\EasyTouchBundle\EasyTouch\Examples\4.X\AdvancedExamples\MultiCamera\MultiCameraTouch.cs" />
@@ -913,9 +906,26 @@
      <Compile Include="Assets\Scripts\AssetBundle\Downloading\DownloadingFileTypeEnum.cs" />
      <Compile Include="Assets\Scripts\AssetBundle\Downloading\DownloadingGetter.cs" />
      <Compile Include="Assets\Scripts\AssetBundle\Downloading\DownloadingManager.cs" />
+     <Compile Include="Assets\Scripts\Battle\Enemy\EnemyCharacter.cs" />
+     <Compile Include="Assets\Scripts\Battle\GamePlayer\CameraShake.cs" />
+     <Compile Include="Assets\Scripts\Battle\GamePlayer\PlayerCharacter.cs" />
+     <Compile Include="Assets\Scripts\Battle\GamePlayer\PlayerUserControl.cs" />
+     <Compile Include="Assets\Scripts\Battle\GamePlayer\SimpleMouseRotator.cs" />
      <Compile Include="Assets\Scripts\Battle\PlayerController\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Battle\ResourceManager\ResourceManager.cs" />
+     <Compile Include="Assets\Scripts\Battle\Skills\TestEffect.cs" />
      <Compile Include="Assets\Scripts\Battle\SpawnManager\SpawnManager.cs" />
+     <Compile Include="Assets\Scripts\Battle\UnitActions\AttackAction.cs" />
+     <Compile Include="Assets\Scripts\Battle\UnitActions\AttackStandbyAction.cs" />
+     <Compile Include="Assets\Scripts\Battle\UnitActions\BaseUnitAction.cs" />
+     <Compile Include="Assets\Scripts\Battle\UnitActions\BeatenAction.cs" />
+     <Compile Include="Assets\Scripts\Battle\UnitActions\DeathAction.cs" />
+     <Compile Include="Assets\Scripts\Battle\UnitActions\JumpAction.cs" />
+     <Compile Include="Assets\Scripts\Battle\UnitActions\RoarAction.cs" />
+     <Compile Include="Assets\Scripts\Battle\UnitActions\RunToTargetAction.cs" />
+     <Compile Include="Assets\Scripts\Battle\UnitActions\WalkToTargetAction.cs" />
+     <Compile Include="Assets\Scripts\Battle\Utils\BaseCharacter.cs" />
+     <Compile Include="Assets\Scripts\Battle\Utils\CharacterAttribute.cs" />
      <Compile Include="Assets\Scripts\CSV\CSVFileReader.cs" />
      <Compile Include="Assets\Scripts\CSV\CSVManager.cs" />
      <Compile Include="Assets\Scripts\CSV\CSVParser.cs" />
@@ -926,25 +936,27 @@
      <Compile Include="Assets\Scripts\CSV\structure\GeneralCSVStructure.cs" />
      <Compile Include="Assets\Scripts\CSV\structure\MCharacterCSVStructure.cs" />
      <Compile Include="Assets\Scripts\CSV\structure\NGCSVStructure.cs" />
+     <Compile Include="Assets\Scripts\CSV\structure\SceneCSVStructure.cs" />
      <Compile Include="Assets\Scripts\CSV\structure\VersionCSVStructure.cs" />
      <Compile Include="Assets\Scripts\CSV\structure\VoiceCSVStructure.cs" />
      <Compile Include="Assets\Scripts\Constant\APIConstant.cs" />
      <Compile Include="Assets\Scripts\Constant\GameConstant.cs" />
      <Compile Include="Assets\Scripts\Constant\PathConstant.cs" />
+     <Compile Include="Assets\Scripts\Coroutine\Coroutine.cs" />
      <Compile Include="Assets\Scripts\File\FileManager.cs" />
      <Compile Include="Assets\Scripts\File\SoCsv.cs" />
+     <Compile Include="Assets\Scripts\Login\Login.cs" />
+     <Compile Include="Assets\Scripts\SceneLoader\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\SingleTon\SingleMonoBehivour.cs" />
+     <Compile Include="Assets\Scripts\Slash\Slash.cs" />
+     <Compile Include="Assets\Scripts\StartUp\StartUp.cs" />
      <Compile Include="Assets\Scripts\Test\Test.cs" />
      <Compile Include="Assets\Scripts\Triggers\Trigger.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\AttackAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\AttackStandbyAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\BaseUnitAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\BeatenAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\DeathAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\JumpAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\RoarAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\RunToTargetAction.cs" />
-     <Compile Include="Assets\Scripts\UnitActions\WalkToTargetAction.cs" />
+     <Compile Include="Assets\Scripts\UGUI\Base\BaseDialog.cs" />
+     <Compile Include="Assets\Scripts\UGUI\Base\BasePage.cs" />
+     <Compile Include="Assets\Scripts\UGUI\Base\UIManager.cs" />
+     <Compile Include="Assets\Scripts\UGUI\Pages\MainPages\BattleScenePanel.cs" />
+     <Compile Include="Assets\Scripts\Utility\ResetMeshCollider.cs" />
      <Compile Include="Assets\Scripts\Utility\ShaderReload.cs" />
      <Compile Include="Assets\Scripts\Utility\StringColor.cs" />
      <Compile Include="Assets\Stages\Camera\MinimapPosition.cs" />
@@ -954,103 +966,28 @@
      <Compile Include="Assets\Stages\Toon_Level_Kit\Examples\Script\Fog.cs" />
      <Compile Include="Assets\Stages\Toon_Level_Kit\Examples\Script\LevelJump.cs" />
      <Compile Include="Assets\Stages\Toon_Level_Kit\Examples\Script\Spawner.cs" />
-     <Compile Include="Assets\Stages\Toon_Level_Kit\Resources\Scripts\BillboardLaub.cs" />
-     <Compile Include="Assets\Stages\Toon_Level_Kit\Resources\Scripts\Butterfly.cs" />
-     <Compile Include="Assets\Stages\Toon_Level_Kit\Resources\Scripts\FpsCounter.cs" />
-     <Compile Include="Assets\Stages\Toon_Level_Kit\Resources\Scripts\HTLiquidSpriteSheet.cs" />
-     <Compile Include="Assets\Stages\Toon_Level_Kit\Resources\Scripts\HTSpriteSheet.cs" />
-     <Compile Include="Assets\WellFired\shared\Uncompiled\Runtime\Platform Specific\IO\OtherIOHelper.cs" />
-     <Compile Include="Assets\WellFired\shared\Uncompiled\Runtime\Platform Specific\IO\WebPlayerIOHelper.cs" />
-     <Compile Include="Assets\WellFired\shared\Uncompiled\Runtime\Platform Specific\IO\WindowsAppStoreIOHelper.cs" />
-     <Compile Include="Assets\WellFired\shared\Uncompiled\Runtime\Platform Specific\OpenInExplorer\IOpen.cs" />
-     <Compile Include="Assets\WellFired\shared\Uncompiled\Runtime\Platform Specific\OpenInExplorer\LinuxOpen.cs" />
-     <Compile Include="Assets\WellFired\shared\Uncompiled\Runtime\Platform Specific\OpenInExplorer\OSXOpen.cs" />
-     <Compile Include="Assets\WellFired\shared\Uncompiled\Runtime\Platform Specific\OpenInExplorer\OpenFactory.cs" />
-     <Compile Include="Assets\WellFired\shared\Uncompiled\Runtime\Platform Specific\OpenInExplorer\WinOpen.cs" />
-     <Compile Include="Assets\WellFired\shared\Uncompiled\Runtime\Platform Specific\Reflection\OtherReflectionHelper.cs" />
-     <Compile Include="Assets\WellFired\shared\Uncompiled\Runtime\Platform Specific\Reflection\WindowsAppStoreReflectionHelper.cs" />
-     <Compile Include="Assets\WellFired\shared\Uncompiled\Runtime\Platform Specific\RuntimeProcessRunner.cs" />
-     <Compile Include="Assets\WellFired\shared\Uncompiled\Runtime\Platform Specific\UnityEditor\EditorUnityEditorHelper.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Quick Start Prefabs\Scripts\AmbientLightAdjuster.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Quick Start Prefabs\Scripts\AutoPlaySequence.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Quick Start Prefabs\Scripts\SequenceTrigger.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Animation Mecanim\Animator\USSetAnimatorBool.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Animation Mecanim\Animator\USSetAnimatorFloat.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Animation Mecanim\Animator\USSetAnimatorInteger.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Animation Mecanim\Animator\USSetAnimatorLayerWeight.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Animation Mecanim\Animator\USSetAnimatorPlaybackSpeed.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Animation Mecanim\Animator\USToggleAnimatorApplyRootMotion.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Animation Mecanim\Animator\USToggleAnimatorStabalizeFeet.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Animation\USBlendAnimEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Animation\USBlendAnimNoScrub.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Animation\USPlayAdvancedAnimEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Animation\USPlayAnimEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Application\USLoadLevelAdditiveEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Application\USLoadLevelEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Attachment\USAttachToParentEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Audio\USFadeAudioEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Audio\USPauseResumeAudioEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Audio\USPlayAudioEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Audio\USStopAudioEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Camera\USCameraDissolveTransition.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Camera\USCameraSetCullingMask.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Debug\USMessageEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Fullscreen\USDisplayImageEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Fullscreen\USFadeScreenEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Fullscreen\USPrintTextEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Light\USSetAmbientLightEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Object\USEnableComponentEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Object\USEnableObjectEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Particle System\USParticleEmitterStartEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Particle System\USParticleEmitterStopEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Physics\USApplyForceEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Physics\USSleepRigidBody.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Recording\USStartRecordingEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Recording\USStopRecordingEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Render\USChangeColor.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Render\USChangeTexture.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Render\USMeshRenderDisable.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Sequence\USPauseSequenceEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Sequence\USPlaySequenceEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Sequence\USSetPlaybackRateEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Sequence\USSkipSequenceEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Sequence\USStopAndSkipToTimeSequenceEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Sequence\USStopSequenceEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Signal\USSendMessageBoolEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Signal\USSendMessageEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Signal\USSendMessageFloatEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Signal\USSendMessageIntEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Signal\USSendMessageStringEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Spawn\USSpawnPrefabEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Time\USTimeScaleEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Transform\USLookAtObjectEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Transform\USMatchObjectEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Transform\USParentAndResetObjectEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Transform\USRotateObjectEvent.cs" />
-     <Compile Include="Assets\WellFired\usequencer\Uncompiled\Runtime\Sequencer Events\Transform\USWarpToObject.cs" />
+     <Compile Include="Assets\Stages\Toon_Level_Kit\Resources_1\Scripts\BillboardLaub.cs" />
+     <Compile Include="Assets\Stages\Toon_Level_Kit\Resources_1\Scripts\Butterfly.cs" />
+     <Compile Include="Assets\Stages\Toon_Level_Kit\Resources_1\Scripts\FpsCounter.cs" />
+     <Compile Include="Assets\Stages\Toon_Level_Kit\Resources_1\Scripts\HTLiquidSpriteSheet.cs" />
+     <Compile Include="Assets\Stages\Toon_Level_Kit\Resources_1\Scripts\HTSpriteSheet.cs" />
      <Compile Include="Assets\iTween\iTween.cs" />
-     <None Include="Assets\WellFired\shared\Installer Data\changelist.txt" />
      <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
      <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\Plugins\Demigiant\DOTweenPro\readme.txt" />
-     <None Include="Assets\Stages\Toon_Level_Kit\Resources\Shaders\Vegetation.shader" />
-     <None Include="Assets\WellFired\shared\Uncompiled\Resources\Transitions\WellFiredWipeLeft.shader" />
+     <None Include="Assets\Stages\Toon_Level_Kit\Resources_1\Shaders\Vegetation.shader" />
      <None Include="Assets\PlayMaker\Templates\readme.txt" />
      <None Include="Assets\PlayMaker\Readme.txt" />
      <None Include="Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.xml" />
-     <None Include="Assets\WellFired\shared\Uncompiled\Resources\Transitions\WellFiredDissolve.shader" />
-     <None Include="Assets\WellFired\shared\Uncompiled\Resources\Transitions\WellFiredWipeDown.shader" />
-     <None Include="Assets\Stages\Toon_Level_Kit\Resources\Shaders\Rim.shader" />
+     <None Include="Assets\Stages\Toon_Level_Kit\Resources_1\Shaders\Rim.shader" />
      <None Include="Assets\Plugins\Demigiant\DOTween\DOTween50.xml" />
      <None Include="Assets\EasyTouchBundle\EasyTouchControls\ReleaseNotes.txt" />
-     <None Include="Assets\WellFired\usequencer\Installer Data\changelist.txt" />
      <None Include="Assets\Shaders\DissolveShader\Shader\Dissolve_WorldCoords.shader" />
      <None Include="Assets\Imported Assets\UnityChan\license.txt" />
-     <None Include="Assets\Stages\Toon_Level_Kit\Resources\Shaders\Vegetation-Lightmap.shader" />
-     <None Include="Assets\Stages\Toon_Level_Kit\Resources\Shaders\Glass.shader" />
+     <None Include="Assets\Stages\Toon_Level_Kit\Resources_1\Shaders\Vegetation-Lightmap.shader" />
+     <None Include="Assets\Stages\Toon_Level_Kit\Resources_1\Shaders\Glass.shader" />
      <None Include="Assets\Plugins\Demigiant\DOTween\DOTween46.xml" />
      <None Include="Assets\EasyTouchBundle\EasyTouchControls\Documentation\Version 2.0.txt" />
-     <None Include="Assets\WellFired\shared\Uncompiled\Resources\Transitions\WellFiredWipeUp.shader" />
      <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
      <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
      <None Include="Assets\EasyTouchBundle\EasyTouch\_Documentation\How to migrate from EasyTouch 4.X.txt" />
@@ -1062,47 +999,41 @@
      <None Include="Assets\Imported Assets\UnityChan\Stage\Shader\AlphaMask.shader" />
      <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
      <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
-     <None Include="Assets\Stages\Toon_Level_Kit\Resources\Shaders\Leave.shader" />
+     <None Include="Assets\Stages\Toon_Level_Kit\Resources_1\Shaders\Leave.shader" />
      <None Include="Assets\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\Plugins\Demigiant\DOTween\DOTween43.xml" />
      <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
      <None Include="Assets\PlayMaker\Resources\PlayMakerAssemblies.txt" />
      <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
      <None Include="Assets\EasyTouchBundle\EasyTouchControls\Issues in button behavior (MAC).txt" />
-     <None Include="Assets\WellFired\shared\Installer Data\version.txt" />
-     <None Include="Assets\WellFired\shared\Uncompiled\Resources\Transitions\WellFiredWipeRight.shader" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
-     <None Include="Assets\WellFired\shared\Installer Data\upgradenotes.txt" />
      <None Include="Assets\PlayMaker\Editor\Install\readme.txt" />
      <None Include="Assets\EasyTouchBundle\EasyTouch\RealseNotes.txt" />
      <None Include="Assets\Shaders\builtin_shaders-5.2.2f1\DefaultResourcesExtra\Normal-Glossy.shader" />
-     <None Include="Assets\WellFired\usequencer\Installer Data\version.txt" />
      <None Include="Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
-     <None Include="Assets\WellFired\usequencer\Installer Data\upgradenotes.txt" />
      <None Include="Assets\EasyTouchBundle\EasyTouch\How to migrate from EasyTouch 4.X.txt" />
      <None Include="Assets\Plugins\Demigiant\readme_DOTweenPro.txt" />
      <None Include="Assets\PlayMaker\Versions\readme.txt" />
-     <None Include="Assets\WellFired\usequencer\Uncompiled\Resources\uSequencer - License.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Applications/Unity5.6.2f1-1/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>/Applications/Unity5.6.2f1-1/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>/Applications/Unity5.6.2f1-1/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>/Applications/Unity5.6.2f1-1/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>/Applications/Unity5.6.2f1-1/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
- <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ <HintPath>/Applications/Unity5.6.2f1-1/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
- <HintPath>/Applications/Unity5.6.2f1/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ <HintPath>/Applications/Unity5.6.2f1-1/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="ConditionalExpression">
  <HintPath>/Users/yingyugang/EvilSword/Assets/PlayMaker/ConditionalExpression.dll</HintPath>
@@ -1130,12 +1061,6 @@
  </Reference>
  <Reference Include="PlayMaker">
  <HintPath>/Users/yingyugang/EvilSword/Assets/Plugins/PlayMaker/PlayMaker.dll</HintPath>
- </Reference>
- <Reference Include="sharedRuntime">
- <HintPath>/Users/yingyugang/EvilSword/Assets/WellFired/shared/Compiled/Runtime/sharedRuntime.dll</HintPath>
- </Reference>
- <Reference Include="usequencerRuntime">
- <HintPath>/Users/yingyugang/EvilSword/Assets/WellFired/usequencer/Compiled/Runtime/usequencerRuntime.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

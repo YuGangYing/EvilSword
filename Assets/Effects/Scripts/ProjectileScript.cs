@@ -65,7 +65,10 @@ public class ProjectileScript : MonoBehaviour {
 			//Destroy(hit.gameObject);
 			hit.gameObject.GetComponent<EnemyCharacter>( ).BeAttacked( );
         }
-
+		else if(hit.gameObject.tag == "Player"){
+			return;
+		}
+		Debug.Log (hit.gameObject);
         //yield WaitForSeconds (0.05);
         foreach (GameObject trail in trailParticles)
 	    {

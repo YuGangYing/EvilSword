@@ -1,0 +1,15 @@
+ManifestFileVersion: 0
+CRC: 696949889
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3d879839754dfdc0985ba0bf7717a564
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 31d6cfe0d16ae931b73c59d7e0c089c0
+HashAppended: 0
+ClassTypes: []
+Assets:
+- Assets/AssetScenes/Scene01/Scene01.unity
+Dependencies:
+- /Users/yingyugang/EvilSword_arpg/Assets/AssetBundles/ios/assetbundles/prefab_scene_halloween.assetbundle
